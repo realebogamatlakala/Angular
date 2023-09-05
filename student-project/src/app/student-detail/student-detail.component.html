@@ -1,0 +1,25 @@
+<div *ngIf="student">
+    <h2>Details : {{student.fname | uppercase}} {{student.lname | uppercase}}</h2>
+  <div>
+    <label for="fname">First name: </label>
+    <input id="fname" [(ngModel)]="student.fname" placeholder="First name">
+  </div>
+  <br/>
+  <div>
+    <label for="lname">Last name: </label>
+    <input id="lname" [(ngModel)]="student.lname" placeholder="First name">
+  </div>
+  <br/>
+  <div>
+    <label for="course">Course name: </label>
+    <input id="course" [(ngModel)]="student.course" placeholder="First name">
+  </div>
+  <br/>
+  <div>
+    <label for="faculty">First name: </label>
+    <input id="faculty" [(ngModel)]="student.faculty" placeholder="First name">
+  </div>
+  <button type="button" (click)="goBack()">go back</button>
+</div> 
+
+

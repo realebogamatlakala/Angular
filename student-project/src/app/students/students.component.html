@@ -1,0 +1,30 @@
+<!-- <h2>Details : {{student.fname | uppercase}} {{student.lname | uppercase}}</h2> -->
+
+<!-- <div><span>Student No : {{student.stdNr}}</span></div>
+<br>
+<div><span>First Name : {{student.fname}}</span></div>
+<br>
+<div><span>Last Name : {{student.lname}}</span></div>
+<br>
+<div><span>Course : {{student.course}}</span></div>
+<br>
+<div><span>Faculty : {{student.faculty}}</span></div>
+<br/>
+<br/> -->
+
+ <ul class="student">
+    <li *ngFor="let student of students">
+        
+        <a routerLink = "/detail/{{student.stdNr}}">
+          <span class="badge">{{student.stdNr}}</span>
+          {{student.fname}}
+          {{student.lname}}
+          {{student.course}}
+          {{student.faculty}}
+        </a>
+      </li>
+       
+</ul>
+<app-student-detail [student]="selectedStudent"></app-student-detail> 
+
+
